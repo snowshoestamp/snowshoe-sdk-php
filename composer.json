@@ -1,9 +1,9 @@
 {
-    "name": "snowshoe/sssapi",
+    "name": "snowshoe/stamp-sdk",
     "type": "library",
-    "description": "SnowShoeStamp Client Api Library",
+    "description": "SnowShoeStamp Client SDK Library",
     "keywords": ["snowshoe", "snowshoestamp", "stamp", "snowshoestamp", "snowshoe stamp"],
-    "homepage": "https://github.com/snowshoestamp/php_sdk",
+    "homepage": "https://github.com/snowshoestamp/snowshoe-sdk-php",
     "license": "MIT",
     "authors": [
         {
