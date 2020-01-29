@@ -1,0 +1,21 @@
+{
+    "name": "snowshoe/sssapi",
+    "type": "library",
+    "description": "SnowShoeStamp Client Api Library",
+    "keywords": ["snowshoe", "snowshoestamp", "stamp", "snowshoestamp", "snowshoe stamp"],
+    "homepage": "https://github.com/snowshoestamp/php_sdk",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Snowshoe Stamp",
+            "email": "engineering@snowshoestamp.com",
+            "homepage": "https://www.snowshoestamp.com/"
+        }
+    ],
+    "require": {
+        "php": ">=7.2.0"
+    },
+    "autoload": {
+        "psr-4": {"Snowshoe\\": "src"}
+    }
+}
