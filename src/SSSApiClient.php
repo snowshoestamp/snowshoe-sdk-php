@@ -1,5 +1,5 @@
 <?php
-
+namespace Snowshoe;
 
 class SSSApiClient { 
     protected $api_key = null;
