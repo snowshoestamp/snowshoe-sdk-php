@@ -21,7 +21,7 @@ class SSSApiClient {
             CURLOPT_POSTFIELDS => "data=$data",
             CURLOPT_HTTPHEADER => array(
               "SnowShoe-Api-Key: $api_key",
-              "Content-Type: application/x-www-form-urlencoded",
+              "Content-Type: application/json",
               "Accept-Encoding: identity"
             ),
           ));
