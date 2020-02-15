@@ -35,7 +35,7 @@ You can install `snowshoe/stamp-sdk` via [the Packagist package](https://packagi
 ```
 In this test sample you create a new client to send and receive the stamp data by using your API Key to register that we got earlier from your account. Then we send a request with the Base64 mock data mentioned earlier (`W1swLDBdLFszNiwzNl0sWzM2LDBdLFsyMCw0XSxbOCwzNl1d`) to get stamp data relating to the API Key and stamp data.
 
-3. You should now be able to go to this php page and this should display an unformatted JSON string showing a 'serial' of 'DEVA'. Formatted properly it should look more like this:
+3. You should now be able to go to this php page in a browser and this should display an unformatted JSON string showing a 'serial' of 'DEVA'. Formatted properly it should look more like this:
 
 ```
 {
