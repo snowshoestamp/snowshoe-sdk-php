@@ -14,11 +14,11 @@ class SSSApiClient {
         $curl = curl_init();
 
         curl_setopt_array($curl, array(
-            CURLOPT_URL => "https://ss-dev-api-stamp.azurewebsites.net/v3/stamp",
+            CURLOPT_URL => "https://api.snowshoestamp.com/v3/stamp",
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_FOLLOWLOCATION => true,
             CURLOPT_CUSTOMREQUEST => "POST",
-            CURLOPT_POSTFIELDS => "{\"data\":\"$data\"}",
+            CURLOPT_POSTFIELDS => "{\"data\":$data}",
             CURLOPT_HTTPHEADER => array(
               "SnowShoe-Api-Key: $api_key",
               "Content-Type: application/json",

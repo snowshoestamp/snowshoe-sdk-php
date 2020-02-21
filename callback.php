@@ -1,5 +1,5 @@
 <?php
-include ("./inc/SSSApiClient.php");
+include ("./src/SSSApiClient.php");
 
 $api_key="abcdefg"; // put api key here
 $data=$_POST['data'];
