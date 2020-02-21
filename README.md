@@ -9,11 +9,11 @@ You can install `snowshoe/stamp-sdk` via [the Packagist package](https://packagi
 
 # Getting Started
 
-1. To get the app running, you will need to create an app on our site. Go to https://app.snowshoestamp.com/ and Sign In if you have an account or sign up if you don't have one. Once you are logged in, click “New App” to create a new one.
+1. To be able to use this SDK tool you need to create an app first. You can learn how to [HERE](https://snowshoe.readme.io/v3.0/docs/part-1-create-a-snowshoe-application)
 
-2. After you have created the new application look at it's settings and you will find 'API Key 1' and 'API Key 2'. These can both be used to pass through as the needed param `$api_key` to get stamp data back from our servers.
+2. Make sure you get the API Key that you will need to run requests. You can learn more about the API Keys [HERE](https://snowshoe.readme.io/v3.0/docs/part-1-create-a-snowshoe-application#get-api-keys)
 
-3. The stamp data passed to our servers is encoded in Base64 and then sent through as form-data. If you use our snowshoe jquery plugin to capture stamp touch point data ( located here: https://cdn.snowshoestamp.com/snowshoe-jquery/0.3.3/jquery.snowshoe.js ) then you don't have to worry about this because the data passed through will already be encoded. In the test page we make we will use mock data of points in Base64 (`W1swLDBdLFszNiwzNl0sWzM2LDBdLFsyMCw0XSxbOCwzNl1d`) to get a stamp return when we send the request.
+3. The stamp data passed to our servers is an array of x,y coordinates. These represent the touch points from the stamp that you are trying to get data for. If you are using our front-end jquery plugin (more info on this located [HERE](https://snowshoe.readme.io/v3.0/docs/maintained-libraries)) to capture stamp touch point data, then you can just pass that data directly through for the request with no need to change.
 
 # A Test Page
 
@@ -29,11 +29,11 @@ You can install `snowshoe/stamp-sdk` via [the Packagist package](https://packagi
 
 ```
   $client= new SSSApiClient("INSERT_API_KEY");
-  $JSONResponse=$client->processData("W1syNjQsMTcyXSxbMjY3LDM3MV0sWzI0MiwyODZdLFs2OSwzNzVdLFs2NiwyMjFdXQ==");
+  $JSONResponse=$client->processData("[[264,172],[267,371],[242,286],[69,375],[66,221]]");
   echo $JSONResponse;
   ?>
 ```
-In this test sample you create a new client to send and receive the stamp data by using your API Key to register that we got earlier from your account. Then we send a request with the Base64 mock data mentioned earlier (`W1swLDBdLFszNiwzNl0sWzM2LDBdLFsyMCw0XSxbOCwzNl1d`) to get stamp data relating to the API Key and stamp data.
+In this test sample you create a new client to send and receive the stamp data by using your API Key to register that we got earlier from your account. Then we send a request with some mock data (`[[264,172],[267,371],[242,286],[69,375],[66,221]]`) to get stamp data relating to the API Key and stamp data.
 
 3. You should now be able to go to this php page in a browser and this should display an unformatted JSON string showing a 'serial' of 'DEVA'. Formatted properly it should look more like this:
 
@@ -48,7 +48,7 @@ In this test sample you create a new client to send and receive the stamp data b
 }
 ```
 
-This is the data that was returned after making the request for the stamp information.
+This is the data that was returned after making the request for the stamp information. For more info on stamp data requests and returns go [HERE](https://snowshoe.readme.io/v3.0/docs/part-3-api-request)
 
 # More info
 
